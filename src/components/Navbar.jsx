@@ -16,15 +16,15 @@ const Navbar = () => {
   console.log(scrollPosition);
 
   return (
-    <div className={classNames( scrollPosition > 0 ? "shadow bg-[#1d464e] w-screen md:px-40" : "max-w-[1240px] mx-auto","  ease-in-out duration-300 flex justify-between items-center h-24  text-white sticky top-0 z-50 mb-4 " )}>
+    <div className={classNames( scrollPosition > 0 ? " shadow  bg-[#1d464e] w-screen md:px-40 sm:px-2" : "max-w-[1240px] mx-auto","  ease-in-out duration-300 flex justify-between items-center h-24  text-white sticky top-0 z-50 mb-4 " )}>
       <h1 className="w-full text-3xl font-bold text-[#fff] pl-3 ">TOGETHER.</h1>
       <ul className="hidden md:flex pr-3">
-        <li className="p-5  duration-100  hover:!scale-[1.2] hover:font-bold cursor-pointer">Blog</li>
-        <li className="p-5 duration-100  hover:!scale-[1.2] hover:font-bold cursor-pointer">Profile</li>
-        <button className={classNames( scrollPosition > 0 ? "text-white": "text-[#255f6bec]","border-none bg-transparent  mr-4 p-5 font-medium duration-100  hover:!scale-[1.2] hover:font-bold")} >
+        <li className="p-5  duration-100  hover:!scale-[1.1] hover:font-bold cursor-pointer md:text-xl">Blog</li>
+        <li className="p-5 duration-100  hover:!scale-[1.1] hover:font-bold cursor-pointer md:text-xl">Profile</li>
+        <button className={classNames( scrollPosition > 0 ? "text-white": "text-[#255f6bec]","border-none bg-transparent md:text-xl  mr-4 p-5 font-medium duration-100  hover:!scale-[1.1] hover:font-bold")} >
           SignIn
         </button>
-        <button className="px-8 py-3 mt-2 mb-3 bg-[#255f6bec] p-5 rounded-lg font-medium hover:bg-[#a4aeb2] hover:text-slate-900 hover:!scale-[1.1] duration-75">
+        <button className="px-8 py-3 mt-2 mb-3 bg-[#255f6bec] p-5 rounded-lg font-medium hover:bg-[#a4aeb2] hover:text-slate-900 hover:!scale-[1.1] duration-75 md:text-xl">
           SignUp
         </button>
       </ul>

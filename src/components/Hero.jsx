@@ -3,7 +3,7 @@ import Typed from "react-typed";
 
 const Hero = () => {
   return (
-    <div className="text-white">
+    <div className="text-white ">
       <div className="max-w-[800px] mt-[-96px] w-ful h-screen mx-auto text-center flex flex-col justify-center">
         <p className="uppercase text-white font-bold p-2">
           Connecting through Christ: Sharing Life's Experiences
@@ -28,7 +28,7 @@ const Hero = () => {
         In Christ, We Connect: Sharing Life's Experiences, Learning from One Another, Growing in Faith, and Encouraging Each Other on Our Journeys
         </p> */}
 
-        <button className="bg-[#255f6bec] w-[200px] rounded-md font-medium my-6 mx-auto py-3">Get Started</button>
+        <button className="bg-[#255f6bec] w-[200px] rounded-md font-medium my-6 mx-auto py-3 md:text-xl">Get Started</button>
       </div>
     </div>
   );
