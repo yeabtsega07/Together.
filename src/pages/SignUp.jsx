@@ -1,5 +1,7 @@
 import React from "react";
 import { AiFillFacebook, AiFillGithub, AiOutlineGoogle } from "react-icons/ai";
+import { Link } from "react-router-dom";
+
 
 const SignUp = () => {
   return (
@@ -24,39 +26,41 @@ const SignUp = () => {
         {/* Inputs */}
         <div className="flex flex-col items-center justify-center mt-2">
           <input
-            type="password"
-            className="rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0"
+            type="text"
+            className="rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0 text-[#000000]"
             placeholder="Name"
           ></input>
           <input
             type="email"
-            className="rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0"
+            className="rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0 text-[#000000]"
             placeholder="Email"
           ></input>
           <input
             type="password"
-            className="rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0"
+            className="rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0 text-[#000000]"
             placeholder="Password"
           ></input>
           <input
             type="password"
-            className="rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0"
+            className="rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0 text-[#000000]"
             placeholder="Confirm Password"
           ></input>
           <input
             type="text"
-            className="rounded-2xl px-2 py-1 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0"
+            className="rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-white focus:outline-none focus:ring-0 text-[#000000]"
             placeholder="Writer Code"
           ></input>
-          <button className="rounded-2xl m-4 text-[#16353cec] bg-white w-3/5 px-4 py-2 shadow-md hover:text-white hover:bg-[#255f6bec] transition duration-200 ease-in">
+          <button className="rounded-2xl m-4 text-[#16353cec] font-medium bg-white w-3/5 px-4 py-2 shadow-md hover:text-white hover:bg-[#255f6bec] transition duration-200 ease-in ">
             Sign Up
           </button>
         </div>
         <div className="inline-block border-[1px] justify-center w-20 border-white border-solid"></div>
         <p className="text-white mt-4 text-sm">Already have an account?</p>
-        <p className="text-white mb-4 text-sm font-medium cursor-pointer">
+        <Link to={'/signin'}>
+        <p className="text-white mb-4 text-sm font-bold cursor-pointer  ">
           Sign In to your Account?
         </p>
+        </Link>
       </div>
     </div>
   );

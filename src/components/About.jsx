@@ -5,7 +5,7 @@ import { BsPersonLinesFill } from "react-icons/bs";
 
 const About = () => {
   return (
-    <div className="bg-[#ffffff] w-full py-32">
+    <div className="bg-[#ffffff] w-screen md:px-10 sm:px-10 py-32">
       <div className="max-w-[1240px] mx-auto">
         <div className=" text-center">
           <h2 className=" md:text-4xl text-2xl font-bold mb-4">

@@ -36,7 +36,7 @@ const QandA = () => {
 
   return (
     <>
-      <section id="trivia" className=" pt-96 px-2 md:pt-60 pb-6  bg-white">
+      <section id="trivia" className=" pt-96 px-2 md:pt-60 pb-6 w-screen md:px-10 sm:px-10 bg-white">
         <h2
           className=" bg-clip-text text-black font-bold text-4xl 
                 text-center "

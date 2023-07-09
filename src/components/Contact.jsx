@@ -4,10 +4,10 @@ import { AiFillContacts } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <div className="bg-white pb-2">
-      <div className="w-full h-[640px] bg-gray-900/90 absolute">
+    <div className="bg-white pb-2 w-screen ">
+      <div className="  h-[640px]  bg-gray-900/90 absolute">
         <img
-          className="w-full h-full object-cover mix-blend-overlay"
+          className=" w-screen object-cover mix-blend-overlay"
           src={contactImg}
           alt="/"
         />
@@ -63,7 +63,7 @@ const Contact = () => {
               <input
                 type="submit"
                 value="Send Message"
-                class="focus:outline-none mt-5 bg-[#47cedb] px-4 py-2 text-white font-bold w-full cursor-pointer hover:text-[#255f6bec] hover:bg-[#dbe5e8]"
+                class="focus:outline-none mt-5 bg-[#47cedb] px-4 py-2 text-white font-bold w-full cursor-pointer hover:text-[#163137ec] hover:bg-[#ffffff]"
               />
             </form>
           </div>

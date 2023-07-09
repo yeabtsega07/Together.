@@ -28,7 +28,7 @@ const Hero = () => {
         In Christ, We Connect: Sharing Life's Experiences, Learning from One Another, Growing in Faith, and Encouraging Each Other on Our Journeys
         </p> */}
 
-        <button className="bg-[#255f6bec] w-[200px] rounded-md font-medium my-6 mx-auto py-3 md:text-xl">Get Started</button>
+        <button className="bg-[#255f6bec] w-[200px] rounded-md font-medium my-6 mx-auto py-3 md:text-xl hover:bg-white hover:text-[#1a3c43ec]">Get Started</button>
       </div>
     </div>
   );
