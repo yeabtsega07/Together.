@@ -46,7 +46,7 @@ function Quotes() {
   };
 
   return (
-    <div className=" px-32 h-[540px]  m-auto pb-24 pt-8 relative group bg-[#141a1daf]">
+    <div className=" px-32 h-[540px] w-screen md:px-10 sm:px-10  m-auto pb-24 pt-8 relative group bg-[#141a1daf]">
         <h1 className=" text-center text-3xl font-medium text-white mb-5 ">Today's Quotes</h1>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].path})` }}

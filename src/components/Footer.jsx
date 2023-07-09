@@ -11,7 +11,7 @@ import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <div className="w-full  bg-[#141a1daf] text-gray-300  px-2">
+    <div className=" w-screen md:px-10 sm:px-10  bg-[#141a1daf] text-gray-300  px-2">
       <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8">
         <div>
           <h6 className="font-bold uppercase pt-2">Quick Links</h6>

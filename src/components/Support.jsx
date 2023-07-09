@@ -2,11 +2,12 @@ import React from "react";
 import { FaHandsHelping } from "react-icons/fa";
 import { GiIdea } from "react-icons/gi";
 import { HiArrowRight } from "react-icons/hi"
+import { HashLink as Link } from 'react-router-hash-link';
 import supportImg from "../assets/support.jpg";
 
 const Support = () => {
   return (
-    <div className="w-full h-screen sm:pb-60">
+    <div className="w-screen  h-screen sm:pb-60">
       <div className="w-full h-[700px] bg-gray-900/90 absolute">
         <img className="w-full h-full object-cover mix-blend-overlay" src={supportImg} alt="/" />
       </div>
@@ -36,7 +37,7 @@ const Support = () => {
               </p>
             </div>
             <div className="bg-slate-100 pl-8 py-4">
-                <p className="flex items-center text-[#47cedb] cursor-pointer hover:font-bold  duration-150">Contact Us <HiArrowRight className="ml-2" /></p>
+                <p className="flex items-center text-[#47cedb] cursor-pointer font-semibold hover:font-bold  duration-150"><Link to="" > Contact Us <HiArrowRight className="ml-2" /></Link></p>
             </div>
         </div>
         <div className="bg-white rounded-xl shadow-2xl">
@@ -51,7 +52,7 @@ const Support = () => {
               </p>
             </div>
             <div className="bg-slate-100 pl-8 py-4">
-                <p className="flex items-center text-[#47cedb] cursor-pointer hover:font-bold duration-150">Contact Us <HiArrowRight className="ml-2" /></p>
+                <p className="flex items-center text-[#47cedb] cursor-pointer font-semibold hover:font-bold duration-150"> <Link to=""  > Contact Us <HiArrowRight className="ml-2" /> </Link> </p>
             </div>
           </div>
         </div>
