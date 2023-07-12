@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import PostCard from "./postCard";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
+
 
 const FeaturePostSection = () => {
   const [showMore, setShowMore] = useState(false);
-  const maxPosts = 3;
+  const maxPosts = 2;
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+
 
   const posts = [
     {
@@ -30,7 +31,7 @@ const FeaturePostSection = () => {
       likes: 20,
       comments: 8,
       tag: "Productivity",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
     },
     {
       id: 3,
@@ -47,14 +48,15 @@ const FeaturePostSection = () => {
   const featuredPost = posts[0];
   const restPosts = showMore ? posts.slice(1) : posts.slice(1, maxPosts);
 
+  
+
   return (
-    <>
 <div className="featured-posts w-screen">
-      <h2 className="text-center text-3xl font-bold text-slate-200">Featured Posts</h2>
-      <div className=" px-40 py-4 h-[270px] relative  ">
+      <h2 className="text-center text-3xl font-bold text-slate-200 mb-3">Featured Posts</h2>
+      <div className=" px-40 py-4">
         <div className="flex justify-between">
 
-        <h3 className="text-2xl font-bold  text-slate-800 py-2 mb-2 ">{featuredPost.title}</h3>
+        <h3 className="text-2xl font-bold  text-slate-900 py-2 mb-2  ">{featuredPost.title}</h3>
          <p className=" text-xl font-thin before:content-['• '] ">{featuredPost.tag}</p>
         </div>
         <div className=" flex justify-start align-middle  ">
@@ -64,21 +66,22 @@ const FeaturePostSection = () => {
           className="rounded-full w-20 h-20"
           />
         <p className="text-lg font-bold pt-5 px-4">By {featuredPost.author}</p>
-        <div class="container  my-20 w-4/5 py-5 px-12 bg-white rounded-xl shadow-2xl">
+        
+          </div>
+      </div>
+        
+        <div className="bg-[#fff] px-40 py-4">
+        <div className=" block bg-white   ">
         <p className="text-lg">
           {featuredPost.content.slice(0, 1000)}...
-          <Link> <button className=" bg-[#719da6ec] p-3 rounded-lg hover:text-white  duration-75 md:text-xl">
+          <Link> <button className=" bg-[#327578ec] p-3 rounded-lg hover:text-white  duration-75 md:text-xl mx-2">
 
           Show More
           </button>
           </Link>
         </p>
-        </div>
-          </div>
-      </div>
-        
-        <div className="bg-[#fff] px-40 py-4">  
-      <div className=" flex-col justify-center px-4 mt-64">
+        </div>  
+      <div className=" flex-col justify-center px-4 mt-20">
         {restPosts.map((post) => (
 
             <PostCard
@@ -87,22 +90,25 @@ const FeaturePostSection = () => {
               tag={post.tag}
               likes={post.likes}
                 key={post.id}
+                content={post.content}
             />
 
         ))}
       </div>
       </div>
       {!showMore && posts.length > maxPosts && (
+        <div className=" bg-white py-4">
+
         <button
-          className="block mx-auto"
+          className="block mx-auto bg-[#327578ec] p-3 rounded-lg hover:text-white  duration-75 md:text-xl   "
           onClick={toggleShowMore}
-        >
+          >
           Show More
         </button>
+          </div>
       )}
+
     </div>
-    <Footer/>
-    </>
   );
 };
 

@@ -5,7 +5,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Navbar from "./components/Navbar";
 import ProfilePage from "./pages/ProfilePage"
-import FeaturedPosts from "./components/featured";
+import Blog from "./pages/Blog";
 
 
 
@@ -20,7 +20,7 @@ function App() {
         <Route path='/profile' element={<ProfilePage/>} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/blog" element={<FeaturedPosts />} />
+        <Route path="/blog" element={<Blog />} />
        
       </Routes>
     </div>
