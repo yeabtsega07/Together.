@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link to="/" className="p-5  border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">Home</Link>
         <Link to="/blog" className="p-5  border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">Blog</Link>
         <Link to="/profile" className="p-5 border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">Profile</Link>
-        <Link to="/Mypost" className="p-5 border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">My Posts</Link>
+        <Link to="/mypost" className="p-5 border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">My Posts</Link>
         <Link to="/signin"> 
         <button className={classNames( scrollPosition > 0 ? "text-white": "text-[#255f6bec]"," bg-transparent md:text-xl  mr-4 p-5  duration-100   border-b-2 border-transparent hover:border-slate-200 font-semibold")} >
           SignIn
@@ -56,7 +56,7 @@ const Navbar = () => {
           <Link to="/profile" className="p-5 cursor-pointer hover:font-bold block " onClick={handleClose}>
             Profile
           </Link>
-          <Link to="/Mypost" className="p-5 cursor-pointer hover:font-bold block " onClick={handleClose}>
+          <Link to="/mypost" className="p-5 cursor-pointer hover:font-bold block " onClick={handleClose}>
             My Posts
           </Link>
 

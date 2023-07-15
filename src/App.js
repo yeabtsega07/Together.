@@ -6,6 +6,9 @@ import SignUp from "./pages/SignUp";
 import Navbar from "./components/Navbar";
 import ProfilePage from "./pages/ProfilePage"
 import Blog from "./pages/Blog";
+import Mypost from "./pages/Mypost";
+import Write from "./components/write";
+import Post from "./components/Post";
 
 
 
@@ -21,6 +24,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/mypost" element={<Mypost />} />
+        <Route path="/write" element={<Write/>} />
+        <Route path="/post" element={<Post/>} />
        
       </Routes>
     </div>

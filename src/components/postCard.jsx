@@ -2,6 +2,7 @@ import React from "react";
 import { BiShare } from "react-icons/bi";
 import { BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { IconButton } from "@material-tailwind/react";
 
 const PostCard = ({ title, author, tag, likes, key, content }) => {
 
@@ -13,7 +14,7 @@ if (content && content.split(" ").length > 20) {
 
   return (
     <div className="border-none shadow-xl hover:!scale-[1.01] duration-200 s p-4 py-12 mb-7 bg-[#dee8e9e8] rounded-md">
-      <Link to={`/posts/${key}`} className="m-1">
+      <Link to={`/post`} className="m-1">
         <div className="flex justify-between">
           <div className="mr-1">
             <img
@@ -40,6 +41,9 @@ if (content && content.split(" ").length > 20) {
           <button className="mr-1 border-none shadow-sm">
             <BsHeart />
           </button>
+          <IconButton>
+      <i className="fas fa-heart" />
+    </IconButton>
           <span className="pr-2">{likes}</span>
           <button className="border-none shadow-sm">
             <BiShare />
