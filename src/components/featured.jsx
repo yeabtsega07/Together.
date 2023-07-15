@@ -74,7 +74,7 @@ const FeaturePostSection = () => {
         <div className=" block bg-white   ">
         <p className="text-lg">
           {featuredPost.content.slice(0, 1000)}...
-          <Link> <button className=" bg-[#327578ec] p-3 rounded-lg hover:text-white  duration-75 md:text-xl mx-2">
+          <Link to='/post'> <button className=" bg-[#327578ec] p-3 rounded-lg hover:text-white  duration-75 md:text-xl mx-2">
 
           Show More
           </button>
