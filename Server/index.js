@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const authRoutes = require("./routes/authRoutes");
+const postsRoutes = require("./routes/postsRoutes");
+const userRoutes = require("./routes/userRoutes");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
@@ -14,6 +16,12 @@ app.use(express.json());
 
 // Routes for authentication
 app.use(`${prefix}/auth`, authRoutes);
+
+// Routes for posts
+app.use(`${prefix}/posts`, postsRoutes);
+
+// Routes for user
+app.use(`${prefix}/users`, userRoutes);
 
 mongoose
   .connect(db )
