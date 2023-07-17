@@ -14,7 +14,7 @@ export default function Write() {
       <form className=" relative">
         <div className="ml-32 flex items-center justify-between">
         <input
-          className = "ml-12 my-4 p-5 w-2/12 text-lg"
+          className = "ml-12 my-4 p-5 w-2/12 text-lg rounded-lg"
           placeholder="Add a Tag"
           type="text"
           autoFocus={true}
@@ -27,7 +27,7 @@ export default function Write() {
         <div  className =" ml-32 flex items-center" >
           
           <input
-          className = "ml-12 my-4 p-5 w-10/12 text-lg"
+          className = "ml-12 my-4 p-5 w-10/12 text-lg rounded-lg"
           placeholder="Add a Title"
           type="text"
           autoFocus={true}
@@ -35,7 +35,7 @@ export default function Write() {
         </div>
         <div className = "ml-32 flex items-center" >
           <textarea
-          className = "ml-12 my-4 p-5 w-10/12 text-lg h-screen"
+          className = "ml-12 my-4 p-5 w-10/12 text-lg h-screen rounded-lg"
           placeholder="Tell your story..."
           type="text"
           autoFocus={true}

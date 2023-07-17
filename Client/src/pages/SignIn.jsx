@@ -1,9 +1,15 @@
-import React from 'react'
+import { useState } from 'react'
+import React  from 'react'
 import {AiFillFacebook, AiOutlineGoogle} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 
 const SignIn = () => {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+  function togglePasswordVisibility() {
+    setIsPasswordVisible((prevState) => !prevState);
+  }
   return (
       <div className=' w-screen h-full py-10 pb-40 flex justify-center items-center'>
 
@@ -20,13 +26,22 @@ const SignIn = () => {
                  </div> </Link>
               </div>
               {/* Inputs */}
-              <div className='flex flex-col items-center justify-center'>
-               <input type='email' className='rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-cyan-500 focus:outline-none focus:ring-0' placeholder='Email'></input>
-               <input type="password" className='rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-cyan-500 focus:outline-none focus:ring-0' placeholder='Password'></input>
-               <button className='rounded-2xl m-2 text-white font-medium bg-[#255f6bec] w-2/5 px-4 py-2 shadow-md hover:text-[#183a41ec] hover:bg-white transition duration-200 ease-in'>
+              <form className='flex flex-col items-center justify-center'>
+               <input type="text"  className='rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-cyan-500 focus:outline-none focus:ring-0' placeholder='UserName'></input>
+               <input type={isPasswordVisible ? "text" : "password"} className='rounded-xl px-4 py-2 w-4/5 md:w-full border-[1px] border-black m-1 focus:shadow-md focus:border-cyan-500 focus:outline-none focus:ring-0' placeholder='Password'/>
+               <label className="flex items-center mt-2 mb-4">
+        <input
+          type="checkbox"
+          className="mr-2 w-4 h-4"
+          checked={isPasswordVisible}
+          onChange={togglePasswordVisibility}
+        />
+        <span className="text-sm text-gray-600">Show password</span>
+      </label>
+               <button type='submit' className='rounded-2xl m-2 text-white font-medium bg-[#255f6bec] w-2/5 px-4 py-2 shadow-md hover:text-[#183a41ec] hover:bg-white transition duration-200 ease-in'>
                  Sign In
                </button>
-              </div>
+              </form>
               <div className="inline-block border-[1px] justify-center mt-3 w-20 border-[#16363cec] border-solid"></div>
               <p className='text-[#424141] mt-4 text-sm'>Don't have an account?</p>
               <Link to={"/signup"}><p className='text-[#000] mb-4 text-sm font-bold  cursor-pointer'>Create a New Account?</p></Link>
