@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link} from "react-router-dom";
 
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useScrollPosition } from "../hooks/useScrollPosition";
+import { Context } from "../context/Context";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -17,8 +18,11 @@ const Navbar = () => {
   const scrollPosition = useScrollPosition();
   // console.log(scrollPosition);
 
-  const user = true;
-  const pp = false;
+ const { user, dispatch } = useContext(Context);
+
+ const handleSignout = () =>{
+  dispatch({ type: "SIGNOUT" });
+ };
 
   return (
     <div className={classNames( scrollPosition > 0 ? " shadow  bg-[#1d464e] w-screen md:px-40 sm:px-2" : "max-w-[1240px] mx-auto","  ease-in-out duration-300 flex justify-between items-center h-24  text-white sticky top-0 z-50 mb-4 " )}>
@@ -44,17 +48,17 @@ const Navbar = () => {
         (
           <ul >
           <Link to="/profile" className="p-5 border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">
-            {pp ? (
+            {user.profilePic ? (
 
               <img class="w-10 h-10 inline-flex items-cente  rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" alt="Bordered avatar"/>
 ):(
   <div class=" inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-    <span class="font-medium text-gray-600 dark:text-gray-300">JL</span>
+    <span class="font-medium text-gray-600 dark:text-gray-300">{user.username.slice(0,2).toUpperCase()}</span>
 </div>
 
   )}
           </Link>
-          <Link  className="p-5 border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl">Signout</Link>
+          <Link  className="p-5 border-b-2 border-transparent hover:border-slate-200 duration-100   font-semibold cursor-pointer md:text-xl" onClick={handleSignout}>Signout</Link>
           </ul>
 
         ):(

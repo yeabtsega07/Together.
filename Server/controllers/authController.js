@@ -24,6 +24,9 @@ const register = async (req, res) => {
 // LOGIN
 const login = async (req, res) => {
   try {
+    console.log("try to login");
+    console.log(req.body);
+  
     const user = await User.findOne({ username: req.body.username });
     !user && res.status(400).json("Wrong credentials!");
 
