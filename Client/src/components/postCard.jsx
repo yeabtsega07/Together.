@@ -2,7 +2,7 @@ import React from "react";
 import { BiShare } from "react-icons/bi";
 import { BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { IconButton } from "@material-tailwind/react";
+
 
 const PostCard = ({ title, author, tag, likes, key, content }) => {
 
@@ -41,9 +41,6 @@ if (content && content.split(" ").length > 20) {
           <button className="mr-1 border-none shadow-sm">
             <BsHeart />
           </button>
-          <IconButton>
-      <i className="fas fa-heart" />
-    </IconButton>
           <span className="pr-2">{likes}</span>
           <button className="border-none shadow-sm">
             <BiShare />
