@@ -6,7 +6,7 @@ const userRoutes = require("./routes/userRoutes");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
-dotenv.config({ path: './config.env' });
+dotenv.config();
 
 const port = process.env.PORT || 5000;
 const db = process.env.MONGO_URL;
