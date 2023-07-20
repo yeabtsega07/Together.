@@ -36,27 +36,36 @@ const updatePost = async (req, res) => {
   }
 };
 
-// DELETE POST
 const deletePost = async (req, res) => {
+  console.log("trying to delete");
+
   try {
     const post = await Post.findById(req.params.id);
     if (post.username === req.body.username) {
       try {
-        await post.delete();
-        res.status(200).json("Post has been deleted...");
-      } catch (err) {
-        res.status(500).json(err);
+        const post = await Post.findByIdAndDelete(req.params.id);
+        if (!post) {
+          return res.status(404).json({ message: "Post not found" });
+        }
+        res.status(200).json({ message: "Post deleted successfully" });
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Unexpected error occurred during post deletion" });
       }
     } else {
       res.status(401).json("You can delete only your post!");
     }
   } catch (err) {
-    res.status(500).json(err);
+    console.error(err); // Log the error to the console
+    res.status(500).json("Unexpected error occurred while fetching post data");
   }
 };
 
+
 // GET POST
 const getPost = async (req, res) => {
+  console.log("trying tp get a single post");
+  console.log(req.params.id);
   try {
     const post = await Post.findById(req.params.id);
     res.status(200).json(post);
@@ -67,6 +76,7 @@ const getPost = async (req, res) => {
 
 // GET ALL POSTS
 const getAllPosts = async (req, res) => {
+  console.log("trying to get all posts");
   const username = req.query.user;
   const catName = req.query.cat;
   try {
@@ -84,6 +94,7 @@ const getAllPosts = async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+  // console.log(res);
 };
 
 module.exports = {

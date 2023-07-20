@@ -7,8 +7,8 @@ import Navbar from "./components/Navbar";
 import ProfilePage from "./pages/ProfilePage"
 import Blog from "./pages/Blog";
 import Mypost from "./pages/Mypost";
-import Write from "./components/write";
-import Post from "./components/Post";
+import Write from "./pages/write";
+import Post from "./pages/Post";
 import { Context } from "./context/Context";
 
 
@@ -22,13 +22,13 @@ function App() {
     <div className='container'>
       <Routes>
         <Route path='/' element={  <Homepage />} />
-        <Route path='/profile' element={<ProfilePage/>} />
+        <Route path='/profile' element={user ? <ProfilePage/> :<SignUp />} />
         <Route path="/signup" element={ user ? <Homepage/> :<SignUp /> } />
         <Route path="/signin" element={user ? <Homepage/> : <SignIn />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/mypost" element={<Mypost />} />
-        <Route path="/write" element={<Write/>} />
-        <Route path="/post" element={<Post/>} />
+        <Route path="/mypost" element={ user ? <Mypost />:<SignUp />} />
+        <Route path="/write" element={user ? <Write/> :<SignUp />} />
+        <Route path="/post/:postId" element={<Post/>} />
        
       </Routes>
     </div>
