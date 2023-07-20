@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import Typed from "react-typed";
+import { Link } from "react-router-dom";
+import { Context } from "../context/Context";
+
 
 const Hero = () => {
+  const { user } = useContext(Context);
   return (
     <div className="text-white ">
       <div className="max-w-[800px] mt-[-96px] w-ful h-screen mx-auto text-center flex flex-col justify-center">
@@ -28,7 +32,15 @@ const Hero = () => {
         In Christ, We Connect: Sharing Life's Experiences, Learning from One Another, Growing in Faith, and Encouraging Each Other on Our Journeys
         </p> */}
 
+        {user ? (  <Link to="/blog">
+        <button className="bg-[#255f6bec] w-[200px] rounded-md font-medium my-6 mx-auto py-3 md:text-xl hover:bg-white hover:text-[#1a3c43ec]">Get Started</button> 
+        </Link> ) :
+        (
+          <Link to="/signup">
         <button className="bg-[#255f6bec] w-[200px] rounded-md font-medium my-6 mx-auto py-3 md:text-xl hover:bg-white hover:text-[#1a3c43ec]">Get Started</button>
+          </Link>
+        )
+        }
       </div>
     </div>
   );
