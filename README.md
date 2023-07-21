@@ -16,7 +16,7 @@ Together is a full-stack MERN (MongoDB, Express, React, Node.js) web application
 
 Clone the repository to your local machine:
 
-git clone https://github.com/your-username/together.git
+git clone https://github.com/yeabtsega07/together.git
 cd together
 Install the server and client dependencies:
 
